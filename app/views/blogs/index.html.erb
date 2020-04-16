@@ -33,9 +33,10 @@
 
      <main class="clearfix">
        <section class="blog">
-           <h2 class="blog-headline">Recent Blogs</h2>
-          　<div class="blog-box">
-            <div class="blog-item clearfix">
+         <h2 class="blog-headline">Recent Blogs</h2>
+          <div class="blog-box">
+            <% @blogs.each do |blog| %>
+             <div class="blog-item clearfix">
                 <%= image_tag('img/forest.jpg', class: 'blog-image') %>
                 <section class="blog-text">
                     <h3 class="blog-text-headline">
@@ -48,9 +49,10 @@
                     <p class="blog-date">June 19, 2017</p>
                     <span class="category">Nature</span>
                 </section>
-            </div> 
-            <div class="blog-item clearfix">
-            <%= image_tag('img/desert.jpg', class: 'blog-image') %>
+              </div> 
+            <% end %>
+              <div class="blog-item clearfix">
+               <%= image_tag('img/desert.jpg', class: 'blog-image') %>
                 <section class="blog-text">
                   <h3 class="blog-text-headline">
                     <a href="single.html">
@@ -64,7 +66,7 @@
                 </section>
               </div>
               <div class="blog-item clearfix">
-              <%= image_tag('img/sunset.jpg', class: 'blog-image') %>
+                <%= image_tag('img/sunset.jpg', class: 'blog-image') %>
                 <section class="blog-text">
                   <h3 class="blog-text-headline">
                     <a href="single.html">
@@ -77,7 +79,7 @@
                 </section>
               </div>
               <div class="blog-item clearfix">
-              <%= image_tag('img/italy.jpg', class: 'blog-image') %>
+                <%= image_tag('img/italy.jpg', class: 'blog-image') %>
                 <section class="blog-text">
                   <h3 class="blog-text-headline">
                     <a href="single.html">
@@ -102,7 +104,7 @@
                   <span class="category">Culture</span>
                 </section>
               </div>
-           </div> 
+            </div> 
            <div class="pagination">
              <p><<</p>
              <p><</p>
