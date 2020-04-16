@@ -6,8 +6,18 @@ class BlogsController < ApplicationController
   end
 
   def new
+    @blog = Blog.new
+  end
+
+  def create
   end
 
   def edit
   end
+
+end
+
+private
+def blog_params
+  params require(:blog).permit(:title, :category, :body)
 end
