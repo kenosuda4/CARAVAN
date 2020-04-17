@@ -40,14 +40,12 @@
                 <%= image_tag('img/forest.jpg', class: 'blog-image') %>
                 <section class="blog-text">
                     <h3 class="blog-text-headline">
-                        <a href="single.html">
-                         Hopeful lessons from<br>
-                         the battle to save<br>
-                         rainforests
-                        </a>
+                     <%= link_to blog.title, blog_path(blog) %>
                     </h3>
                     <p class="blog-date">June 19, 2017</p>
-                    <span class="category">Nature</span>
+                    <span class="category">
+                     <%= blog.category %>
+                    </span>
                 </section>
               </div> 
             <% end %>
